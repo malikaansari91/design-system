@@ -18,7 +18,7 @@ function App() {
       <hr />
       <Accordian allowToggle allowMultiple activeIds={[1]}>
         <Accordian.Item id={1}>
-          <Accordian.Header>header1</Accordian.Header>
+          <Accordian.Header>header1 h</Accordian.Header>
           <Accordian.Content>thsi</Accordian.Content>
         </Accordian.Item>
         <Accordian.Item>
