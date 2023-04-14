@@ -7,7 +7,7 @@ import { TodoContextProvider } from "./context/TodoContext";
 function App() {
   return (
     <>
-      <a>learn react</a>
+      <a href="www.google.com">learn react</a>
       <TodoContextProvider>
         <div className="App">
           <div className="todo-container">
