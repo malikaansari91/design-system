@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Accordian from "./components/Accordian/Accordian";
+import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
+import { TodoContextProvider } from "./context/TodoContext";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <TodoContextProvider>
+        <div className="App">
+          <div className="todo-container">
+            <TodoForm />
+            <TodoList />
+          </div>
+        </div>
+      </TodoContextProvider>
+      <hr />
+      <Accordian allowToggle allowMultiple activeIds={[1]}>
+        <Accordian.Item id={1}>
+          <Accordian.Header>header1</Accordian.Header>
+          <Accordian.Content>thsi</Accordian.Content>
+        </Accordian.Item>
+        <Accordian.Item>
+          <Accordian.Header>header2</Accordian.Header>
+          <Accordian.Content>thsi</Accordian.Content>
+        </Accordian.Item>
+        <Accordian.Item>
+          <Accordian.Header>header3</Accordian.Header>
+          <Accordian.Content>thsi</Accordian.Content>
+        </Accordian.Item>
+      </Accordian>
+    </>
   );
 }
 

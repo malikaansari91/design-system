@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-logo {
@@ -12,6 +15,8 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+@import url(./styles/todo.css);
 
 .App-header {
   background-color: #282c34;

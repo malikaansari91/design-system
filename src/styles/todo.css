@@ -1,0 +1,45 @@
+.todo-list {
+  padding: 0;
+}
+
+.todo-container {
+  border: 2px solid;
+  width: 500px;
+  max-width: 85%;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+.todo-item .check-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #dedede;
+  margin-right: 20px;
+}
+
+.todo-item .todo-label.active {
+  text-decoration: line-through;
+}
+
+.todo-item .delete-button {
+  color: red;
+  visibility: hidden;
+  margin-left: 30px;
+  background: transparent;
+  border: none;
+}
+
+.todo-item:hover .delete-button {
+  visibility: visible;
+}
+
+.todo-item label,
+.edit-input {
+  flex: 1;
+}
