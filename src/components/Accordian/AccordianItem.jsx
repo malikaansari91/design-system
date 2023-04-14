@@ -1,9 +1,8 @@
-import React, { createContext, useContext, useId, useState } from "react";
-import AccordianContent from "./AccordianContent";
+import React, { createContext, useContext, useId } from "react";
 import { AccordianContext } from "./Accordian";
 
 export const AccordianItemContext = createContext();
-function AccordianItem({ children, id, ...rest }) {
+function AccordianItem({ children, id }) {
   const uniqueId = useId();
   const accId = id ?? uniqueId;
   const { expandedIds, allowMultiple, onToggleAccordian, activeId } =
