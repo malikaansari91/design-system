@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches: ["main"]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,6 +16,8 @@ jobs:
         run: npm install
       - name: Build app
         run: npm run build
+      - name: Test app
+        run: npm test
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

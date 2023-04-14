@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import AccordianItem from "./AccordianItem";
 import AccordianHeader from "./AccordianHeader";
 import AccordianContent from "./AccordianContent";
